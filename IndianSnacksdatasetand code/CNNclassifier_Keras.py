@@ -12,7 +12,7 @@ from keras.models import model_from_json
 from keras.utils import np_utils
 import numpy as np
 from matplotlib import pyplot as plt
-import indiansnacksdataset as data
+import dataSetPrepreation as data
 
 #train_data = data.load_train_data()
 test_data = data.load_test_data()
@@ -153,5 +153,5 @@ loaded_model.load_weights("Saved_Model/CNNModelIndian.h5")
 print("Loaded model from disk")
 
 #predict using the test model
-data.predict_test(loaded_model, 12)
 
+data.predict_imgs(loaded_model,12,val)

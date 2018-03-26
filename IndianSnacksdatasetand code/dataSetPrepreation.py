@@ -3,6 +3,7 @@ import numpy as np         # dealing with arrays
 import os                  # dealing with directories
 from random import shuffle # mixing up or currently ordered data that might lead our network astray in training.
 from tqdm import tqdm
+from matplotlib import pyplot as plt
 TRAIN_DIR ='train_images'
 TEST_DIR= 'test_images'
 IMG_SIZE=280
@@ -52,9 +53,9 @@ def load_test_data_NPY():
     return data
 
 
-def predict_imgs(model,No_of_Images):
+def predict_imgs(model,No_of_Images,Imgs_np):
     fig=plt.figure()
-    for num,data in enumerate(train[:No_of_Images]):
+    for num,data in enumerate(Imgs_np[:No_of_Images]):
 
         
         img_num = data[1]
